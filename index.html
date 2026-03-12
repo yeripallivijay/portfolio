@@ -21,22 +21,26 @@
 <!-- NAVBAR -->
 
 <header>
+  <nav class="navbar">
+    <h2 class="logo">Vijay</h2>
 
-<nav>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-<h2 class="logo">Vijay</h2>
-
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#impact">Impact</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#github">GitHub</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-
+    <!-- Nav Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#github">GitHub</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 
@@ -278,33 +282,31 @@ Visit GitHub
 
 </section>
 
-
 <!-- CONTACT -->
-
 <section id="contact">
 
-<h2>Contact</h2>
+  <h2>Contact</h2>
 
-<p>
-Email:
-<a href="mailto:yeripallivijay2003@gmail.com" target="_blank">
-Click Here
-</a>
-</p>
+  <p>
+    Email:
+    <a href="mailto:yeripallivijay2003@gmail.com" class="btn" target="_blank">
+      Click to Email
+    </a>
+  </p>
 
-<p>
-GitHub:
-<a href="https://github.com/yeripallivijay" target="_blank">
-Click Here
-</a>
-</p>
+  <p>
+    GitHub:
+    <a href="https://github.com/yeripallivijay" class="btn" target="_blank">
+      Visit GitHub
+    </a>
+  </p>
 
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/vijayarjun58/" target="_blank">
-Click Here
-</a>
-</p>
+  <p>
+    LinkedIn:
+    <a href="https://www.linkedin.com/in/vijayarjun58/" class="btn" target="_blank">
+      View LinkedIn
+    </a>
+  </p>
 
 </section>
 
@@ -372,6 +374,14 @@ projectsContainer.appendChild(card);
 projectsContainer.innerHTML = "<p>Unable to load GitHub projects.</p>";
 });
 
+</script>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
 </script>
 
 </body>
